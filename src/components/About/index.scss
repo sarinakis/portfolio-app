@@ -1,0 +1,187 @@
+.about-page {
+    
+    .stage-cube-cont {
+        width: 46%;
+        height: 100%;
+        top: -5%;
+        padding-top: 18%;
+        margin-left: 0;
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+        font-size: 32px;
+    }
+
+    .cubespiner {
+        animation-name: spincube;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 12s;
+        transform-style: preserve-3d;
+        transform-origin: 100px 100px 0;
+        margin-left: calc(50% - 100px);
+
+        &:hover {
+            scale: 1.4;
+        }
+    
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            background: rgba(163, 163, 163, 0.4);
+            text-align: center;
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 15px 0px lightyellow;
+        }
+    
+        .face1 {
+            transform: translateZ(100px);
+            color: #D0649C;
+        }
+    
+        .face2 {
+            transform: rotateY(90deg) translateZ(100px);
+            color: #f06529;
+        }
+    
+        .face3 {
+            transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+            color: #28a4d9;
+        }
+    
+        .face4 {
+            transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+            color: #5ed4f4;
+        }
+    
+        .face5 {
+            transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+            color: #efd81d;
+        }
+    
+        .face6 {
+            transform: rotateX(-90deg) translateZ(100px);
+            color: #ec4d28;
+        }
+    }
+    
+    @keyframes spincube {
+    
+        from,
+        to {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+    
+        16% {
+            transform: rotateY(-90deg) rotateZ(90deg);
+        }
+    
+        33% {
+            transform: rotateY(-90deg) rotateX(90deg);
+        }
+    
+        50% {
+            transform: rotateY(-180deg) rotateZ(90deg);
+        }
+    
+        66% {
+            transform: rotateY(-270deg) rotateX(90deg);
+        }
+    
+        83% {
+            transform: rotateX(90deg);
+        }
+    }
+
+    .text-zone {
+        position: absolute;
+        left: 11%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60%;
+        max-height: 905;
+    }
+
+    h2 {
+        color: #EEEEEE;
+        font-size: 54px;
+        letter-spacing: 4px;
+        margin: 0;
+        margin-bottom: 5%;
+    }
+
+    h2::before {
+        content: "<h2>";
+        font-family: "La Belle Aurore";
+        color: #5E5E5E;
+        font-size: 18px;
+        position: absolute;
+        top: -5%;
+        left: 0;
+    }
+
+    h2::after {
+        content: "<h2/>";
+        font-family: "La Belle Aurore";
+        color: #5E5E5E;
+        font-size: 18px;
+        position: absolute;
+        top: 8%;
+        left: 48.5%;    
+        animation: fadeIn 1s 1.7s backwards;
+    }
+
+    p {
+        display: block;
+        width: 70%;
+        font-size: 22px;
+        font-family: 'Montserrat';
+        color: #EEEEEE;
+    }
+
+    p::before {
+        content: "<p>";
+        font-family: "La Belle Aurore";
+        color: #5E5E5E;
+        font-size: 18px;
+        position: absolute;
+        top: 20%;
+    }
+
+    p::after {
+        content: "<p/>";
+        font-family: "La Belle Aurore";
+        color: #5E5E5E;
+        font-size: 18px;
+        position: absolute;
+        top: 76%;
+        left: 0;
+        animation: fadeIn 1s 1.7s backwards;
+    }
+
+    .flat-button {
+        color: #00C2FF;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        letter-spacing: 4px;
+        text-decoration: none;
+        margin-top: 5%;
+        padding: 15px 23px;
+        border: 1px solid #00C2FF;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
+        transition: drop-shadow;
+
+        &:hover {
+            background: #00C2FF;
+            color: #20252F;
+            filter: drop-shadow(-2px 2px 0.75rem #00C2FF);
+        }
+    }
+}

@@ -1,0 +1,40 @@
+$primary-color: #00C2FF;
+
+@import 'animate.css';
+@import 'loaders.css/src/animations/ball-clip-rotate-multiple.scss';
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('./assets/fonts/LaBelleAurore-Regular.woff2') format('woff2');
+}
+
+input,
+textarea {
+  font-family: 'Roboto';
+}
+
+
+.loader-hidden {
+  display: none;
+}
+
+.loader-active {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  scale: 5;
+  margin: auto;
+  animation: fadeOut .75s .75s;
+  animation-fill-mode: forwards;
+}

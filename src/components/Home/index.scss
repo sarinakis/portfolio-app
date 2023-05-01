@@ -1,0 +1,59 @@
+.home-page {
+    .text-zone {
+        position: absolute;
+        left: 11%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60%;
+        max-height: 905;
+    }
+
+    h1 {
+        color: #EEEEEE;
+        font-size: 64px;
+        letter-spacing: 4px;
+        margin: 0;
+        margin-bottom: 5%;
+    }
+
+    &::before {
+        content: "<h1>";
+        font-family: "La Belle Aurore";
+        color: #5E5E5E;
+        font-size: 18px;
+        position: absolute;
+        top: 26%;
+        left: 11%;
+    }
+
+    &::after {
+        content: "<h1/>";
+        font-family: "La Belle Aurore";
+        color: #5E5E5E;
+        font-size: 18px;
+        position: absolute;
+        top: 55.5%;
+        left: 55.5%;
+        animation: fadeIn 1s 1.7s backwards;
+    }
+
+    .flat-button {
+        color: #00C2FF;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        letter-spacing: 4px;
+        text-decoration: none;
+        padding: 15px 23px;
+        border: 1px solid #00C2FF;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
+        transition: drop-shadow;
+
+        &:hover {
+            background: #00C2FF;
+            color: #20252F; 
+            filter: drop-shadow(-2px 2px 0.75rem #00C2FF);
+        }
+    }
+}
